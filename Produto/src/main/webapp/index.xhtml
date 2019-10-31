@@ -1,0 +1,68 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:head>
+        <title>Facelet Title</title>
+    </h:head>
+    <h:body>
+        Produto
+        <h:form>
+            <h:outputText id="codigoLabel" value="Codigo:"/>
+            <h:inputText value="#{jsfCidade.codigo}"/>
+            <h:outputText id="cidadeLabel" value="Cidade"/>
+            <h:inputText value="#{jsfCidade.nome}" />
+            <h:commandButton value="Salvar" action="#{jsfCidade.persist()}" />
+        </h:form>
+
+        <h:form>
+            <h:dataTable value="#{jsfCidade.all}" var="cid">
+                <h:column>
+                    <h:outputText value="#{cid.codigo}" />
+                </h:column>
+                <h:column>
+                    <h:outputText value="#{cid.nome}" />
+                </h:column>
+
+            </h:dataTable>
+        </h:form>
+        <table class = "integrantes">
+            <thead>
+                <tr>
+                    <th class = "ra" scope = "col">RA</th>
+                    <th class = "nome" scope = "col">Name</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class = "integrantes1">
+                    <td>1583050</td>
+                    <td>Raquel Sato</td>
+                </tr>
+                   <tr class = "integrantes2">
+                    <td>1914383</td>
+                    <td>Matheus Candido</td>
+                </tr>
+                   <tr class = "integrantes3">
+                    <td>1750542</td>
+                    <td>Kássia Catarine</td>
+                </tr>
+                   <tr class = "integrantes4">
+                    <td>1426311</td>
+                    <td>Wirlley Delfino</td>
+                </tr>
+                   <tr class = "integrantes5">
+                    <td>1750607</td>
+                    <td>Ykaro Andrade</td>
+                </tr>
+                   <tr class = "integrantes6">
+                    <td>1884727</td>
+                    <td>Philipe Loureiro</td>
+                </tr>
+                   <tr class = "integrantes7">
+                    <td>1647245</td>
+                    <td>Chuks Ricardo</td>
+                </tr>
+        </table>
+    </h:body>
+</html>
+
