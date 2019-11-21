@@ -7,14 +7,12 @@
               width: 750px;
           }
           .fot{
-              margin-top: 99%;
+              margin-top: 65%;
           }
           td, th {
               padding: 0 20px;
           }
-          .corLaranja{
-              background-color: orange;
-          }
+       
       </style>
     <h:head>
         <title>Grupo 5 - Produto</title>
@@ -25,12 +23,24 @@
         </h2>
         <h:form>
             <h:outputText id="codigoLabel" value="Codigo:"/>
-            <h:inputText class="corLaranja" value="#{jsfCidade.codigo}"/>
-            <h:outputText id="cidadeLabel" value="Nome:"/>
-            <h:inputText class="corLaranja" value="#{jsfCidade.nome}" />
+            <h:inputText value="#{jsfProduto.codigo}"/>
+            <h:outputText id="produtoLabel" value="Nome"/>
+            <h:inputText value="#{jsfProduto.nome}" />
+            <h:commandButton value="Salvar" action="#{jsfProduto.persist()}" />
+        </h:form>
+        <h2>
+        Cidade
+        </h2>
+        <h:form>
+            <h:outputText id="codigoLabel" value="Longitude:"/>
+            <h:inputText value="#{jsfCidade.codigo}"/>
+            <h:outputText id="cidadeLabel" value="Latitude:"/>
+            <h:inputText value="#{jsfCidade.nome}" />
             <h:commandButton value="Salvar" action="#{jsfCidade.persist()}" />
         </h:form>
-
+        <h2>
+           Lista de Cidade
+        </h2>
         <h:form>
             <h:dataTable value="#{jsfCidade.all}" var="cid">
                 <h:column>
@@ -40,6 +50,19 @@
                     <h:outputText value="#{cid.nome}" />
                 </h:column>
 
+            </h:dataTable>
+        </h:form>
+        <h2>
+            Lista de Produtos
+         </h2>
+        <h:form>
+            <h:dataTable value="#{jsfProduto.all}" var="cid">
+                <h:column>
+                    <h:outputText value="#{cid.codigo}" />
+                </h:column>
+                <h:column>
+                    <h:outputText value="#{cid.nome}" />
+                </h:column>
             </h:dataTable>
         </h:form>
         <footer class="fot">
