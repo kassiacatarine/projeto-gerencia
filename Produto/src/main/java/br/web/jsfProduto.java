@@ -8,6 +8,8 @@ package br.web;
 import javax.inject.Named;
 import javax.enterprise.context.SessionScoped;
 import java.io.Serializable;
+import javax.faces.application.FacesMessage;
+import javax.faces.context.FacesContext;
 
 /**
  *
@@ -43,10 +45,17 @@ public class jsfProduto implements Serializable {
     }
     
     public void persist(){
+        FacesContext context = FacesContext.getCurrentInstance();
+        FacesMessage ms;
         br.data.entity.Cidade cid = new br.data.entity.Cidade();
         cid.setCodigo(codigo);
         cid.setNome(nome);
-        new br.data.crud.CrudCidade().persist(cid);
+        if(cid.getCodigo() > 0){
+            new br.data.crud.CrudCidade().persist(cid);
+            context.addMessage(null, new FacesMessage("Registro inserido com sucesso!"));
+        } else{
+            context.addMessage(null, new FacesMessage("Codigo invalido."));
+        }
     }
     
     public java.util.Collection<br.data.entity.Cidade> getAll(){
