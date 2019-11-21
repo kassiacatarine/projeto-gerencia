@@ -1,0 +1,6 @@
+//sudo su postgres
+//psql [gcdb1][gcdb3][gcdb3]
+
+drop from cidade where codigo = 0;
+
+drop from produto where codigo = 0;
