@@ -1,5 +1,5 @@
 
-#create database gcdb	
+#create database gcdb2	
 #CREATE TABLE public.cidade
 (
   codigo integer NOT NULL,
