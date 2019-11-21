@@ -12,6 +12,9 @@
           td, th {
               padding: 0 20px;
           }
+          .corLaranja{
+              background-color: orange;
+          }
       </style>
     <h:head>
         <title>Grupo 5 - Produto</title>
@@ -22,9 +25,9 @@
         </h2>
         <h:form>
             <h:outputText id="codigoLabel" value="Codigo:"/>
-            <h:inputText value="#{jsfCidade.codigo}"/>
+            <h:inputText class="corLaranja" value="#{jsfCidade.codigo}"/>
             <h:outputText id="cidadeLabel" value="Nome:"/>
-            <h:inputText value="#{jsfCidade.nome}" />
+            <h:inputText class="corLaranja" value="#{jsfCidade.nome}" />
             <h:commandButton value="Salvar" action="#{jsfCidade.persist()}" />
         </h:form>
 
