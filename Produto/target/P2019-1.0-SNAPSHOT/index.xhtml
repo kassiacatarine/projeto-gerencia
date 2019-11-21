@@ -1,31 +1,36 @@
 <?xml version='1.0' encoding='UTF-8' ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:h="http://xmlns.jcp.org/jsf/html">
-      <style>
-          body {
-              width: 750px;
-          }
-          .fot{
-              margin-top: 99%;
-          }
-          td, th {
-              padding: 0 20px;
-          }
-      </style>
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <style>
+        body {
+            width: 600px;
+        }
+        .fot{
+            margin-top: 99%;
+        }
+        td, th {
+            padding: 0 20px;
+        }
+        
+        
+    </style>
     <h:head>
         <title>Grupo 5 - Produto</title>
     </h:head>
     <h:body>
         <h2>
-        Produto
+            Produto
         </h2>
         <h:form>
             <h:outputText id="codigoLabel" value="Codigo:"/>
-            <h:inputText value="#{jsfCidade.codigo}"/>
+            <h:inputText  value="#{jsfCidade.codigo}"/>
+            <br/>
             <h:outputText id="cidadeLabel" value="Nome:"/>
-            <h:inputText value="#{jsfCidade.nome}" />
-            <h:commandButton value="Salvar" action="#{jsfCidade.persist()}" />
+            <h:inputText  value="#{jsfCidade.nome}" />
+            <br/>
+            <h:commandButton value="Salvar"  action="#{jsfCidade.persist()}" />
         </h:form>
 
         <h:form>
