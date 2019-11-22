@@ -7,7 +7,7 @@ nome character varying(60),
 CONSTRAINT pk_cid PRIMARY KEY (codigo)
 );
 #CREATE TABLE public.produto(
-codigo.integer NOT NULL,
+codigo integer NOT NULL,
 nome character varyying(60),
 CONSTRAINT pk_pro PRIMARY KEY(codigo)
 );
